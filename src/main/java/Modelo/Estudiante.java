@@ -1,35 +1,45 @@
-
 package Modelo;
 
 public class Estudiante {
-    
-    private int idEstudiante;
-    private String nombre;
-    private String apellido;
-    private String telefono;
-    private String email;
-    private double edad;
 
+    // Atributos
+    private int idEstudiante; // Identificador único del estudiante
+    private String nombre; // Nombre del estudiante
+    private String apellido; // Apellido del estudiante
+    private String email; // Correo electrónico del estudiante
+    private String telefono; // Número de teléfono del estudiante
+    private double edad; // Edad del estudiante
+
+    // Constructor con un parámetro para el id del estudiante
+    public Estudiante(int idEstudiante) {
+        this.idEstudiante = idEstudiante;
+    }
+
+    // Constructor sin parámetros
     public Estudiante() {
     }
 
-    public Estudiante(int idEstudiante, String nombre, String apellido, String telefono, String email, double edad) {
+    // Constructor con todos los parámetros
+    public Estudiante(int idEstudiante, String nombre, String apellido, String email,
+            String telefono, double edad) {
         this.idEstudiante = idEstudiante;
         this.nombre = nombre;
         this.apellido = apellido;
-        this.telefono = telefono;
         this.email = email;
+        this.telefono = telefono;
         this.edad = edad;
     }
 
-    public Estudiante(String nombre, String apellido, String telefono, String email, double edad) {
+    // Constructor sin el id del estudiante
+    public Estudiante(String nombre, String apellido, String email, String telefono, double edad) {
         this.nombre = nombre;
         this.apellido = apellido;
-        this.telefono = telefono;
         this.email = email;
+        this.telefono = telefono;
         this.edad = edad;
     }
 
+    // Métodos getters y setters para todos los atributos
     public int getIdEstudiante() {
         return idEstudiante;
     }
@@ -54,20 +64,20 @@ public class Estudiante {
         this.apellido = apellido;
     }
 
-    public String getTelefono() {
-        return telefono;
-    }
-
-    public void setTelefono(String telefono) {
-        this.telefono = telefono;
-    }
-
     public String getEmail() {
         return email;
     }
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getTelefono() {
+        return telefono;
+    }
+
+    public void setTelefono(String telefono) {
+        this.telefono = telefono;
     }
 
     public double getEdad() {
@@ -77,7 +87,5 @@ public class Estudiante {
     public void setEdad(double edad) {
         this.edad = edad;
     }
-    
-    
-    
+
 }
